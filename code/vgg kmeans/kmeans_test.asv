@@ -1,0 +1,8 @@
+clear;clc
+load wholedes_plus;
+addpath(genpath('F:\softwares\dolloar_toolbox_V2.53'));
+[CX, sse] = kmeans2(wholedes, 4000);
+
+
+mex vgg_kmiter.c
+[CX2, sse2] = vgg_kmeans(wholedes, 4000, varargin)
